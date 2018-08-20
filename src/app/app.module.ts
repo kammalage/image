@@ -6,10 +6,14 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
+import { LongPressModule } from 'ionic-long-press';
 import { TabsPage } from '../pages/tabs/tabs';
+import { DocumentModalPage } from '../pages/document-modal/document-modal';
+import { DocPopoverComponent } from '../components/doc-popover/doc-popover';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Camera } from '@ionic-native/camera'
 
 @NgModule({
   declarations: [
@@ -17,10 +21,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    DocumentModalPage,
+    DocPopoverComponent
   ],
   imports: [
     BrowserModule,
+    LongPressModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -29,11 +36,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    DocumentModalPage,
+    DocPopoverComponent
+
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

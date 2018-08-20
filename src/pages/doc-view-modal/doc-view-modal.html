@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+  	<ion-buttons left>
+		<button ion-button icon-only (click)="viewCtrl.dismiss()" class="my-style-for-modal">
+		    <ion-icon name="arrow-back"></ion-icon>
+		</button>
+	</ion-buttons>
+    <ion-title>{{imageName}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-row>
+		<ion-col>
+			<img src="assets/imgs/{{ imageName }}.jpg">	
+		</ion-col>
+	</ion-row>
+</ion-content>
