@@ -6,9 +6,11 @@ page-document-modal {
 	}
 
 	.image-container {
-		//min-height: 90px;
-		height: 64px;
-		width: 64px;
+		img {
+			height: 64px;
+			width: 64px;
+		}
+
 		float: left;
 		background-size: cover;
 		position: relative;
@@ -34,8 +36,8 @@ page-document-modal {
 
 	.custom-checkbox {
 		@extend.checkbox-ios;
-		top: -10%;
-		left: -35%;
+		top: -20%;
+		left: -20%;
 		z-index: 2;
 	}
 }

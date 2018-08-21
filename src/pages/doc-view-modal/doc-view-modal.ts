@@ -14,11 +14,10 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
   templateUrl: 'doc-view-modal.html',
 })
 export class DocViewModalPage {
-	imageName: string = "";
+	imageData: string = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
-  	this.imageName = this.navParams.get('imageName');
-  	console.log(this.imageName);
+  	this.imageData = this.navParams.get('imageData');
   }
 
   ionViewDidLoad() {

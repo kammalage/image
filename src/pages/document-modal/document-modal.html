@@ -32,7 +32,14 @@
 				<div ion-long-press [interval]="500" (click)="openDocViewModal(image);" (onPressStart)="onPress($event, image)"
 	            (onPressing)="onLongPress($event, image)"
 	            (onPressEnd)="onPressRelease($event, image)" *ngIf="image.docType == doctype">
+					<!--
 					<div margin-left class="image-container" [style.background-image]="'url(assets/imgs/' + image.name + '.jpg)'">
+						<ion-checkbox margin-left class="custom-checkbox" [(ngModel)]="image.checkbox" *ngIf="editFlag"></ion-checkbox>
+						<ion-label no-margin class="image-label">{{image.name}}</ion-label>
+					</div>
+					-->
+					<div margin-left margin-bottom no-padding class="image-container" >
+						<img no-margin no-padding [src]="image.imageData">
 						<ion-checkbox margin-left class="custom-checkbox" [(ngModel)]="image.checkbox" *ngIf="editFlag"></ion-checkbox>
 						<ion-label no-margin class="image-label">{{image.name}}</ion-label>
 					</div>
@@ -40,6 +47,7 @@
 			</div>
 		</ion-col>
 	</ion-row>
+	<!--<img [src]="testImage" />-->
 	<button ion-button *ngIf="editFlag" (click)="openMoveAlert();">Move</button>
 </ion-grid>
 </ion-content>
