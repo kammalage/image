@@ -40,14 +40,16 @@
 					-->
 					<div margin-left margin-bottom no-padding class="image-container" >
 						<img no-margin no-padding [src]="image.imageData">
-						<ion-checkbox margin-left class="custom-checkbox" [(ngModel)]="image.checkbox" *ngIf="editFlag"></ion-checkbox>
-						<ion-label no-margin class="image-label">{{image.name}}</ion-label>
+						<ion-checkbox margin-left no-padding class="custom-checkbox" [(ngModel)]="image.checkbox" *ngIf="editFlag"></ion-checkbox>
+						<ion-label no-margin no-padding class="image-label">{{image.name}}</ion-label>
 					</div>
 				</div>		
 			</div>
 		</ion-col>
 	</ion-row>
 	<!--<img [src]="testImage" />-->
-	<button ion-button *ngIf="editFlag" (click)="openMoveAlert();">Move</button>
 </ion-grid>
 </ion-content>
+<ion-footer no-margin no-padding>
+	<button ion-button no-margin no-padding class="full-width" *ngIf="editFlag" (click)="openMoveAlert();">Move</button>
+</ion-footer>

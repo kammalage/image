@@ -18,7 +18,7 @@ page-document-modal {
 		.image-label {
 			width:100%;
 			position: absolute;
-			bottom: 0;
+			bottom: 8%;
 			text-align: center;
 			color: white;
 			font-weight: bold;
@@ -36,8 +36,13 @@ page-document-modal {
 
 	.custom-checkbox {
 		@extend.checkbox-ios;
-		top: -20%;
-		left: -20%;
+		top: -9%;
+		left: -35%;
 		z-index: 2;
+		position: absolute;
+	}
+
+	.full-width {
+		width: 100%;
 	}
 }
